@@ -1,0 +1,11 @@
+{
+  "name": "parceltracker-browser-runner",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch": "node fetch.mjs"
+  },
+  "dependencies": {
+    "puppeteer-core": "^24.7.1"
+  }
+}

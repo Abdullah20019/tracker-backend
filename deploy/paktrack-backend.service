@@ -1,0 +1,16 @@
+[Unit]
+Description=PakTrack FastAPI Backend
+After=network.target
+
+[Service]
+Type=simple
+User=paktrack
+Group=www-data
+WorkingDirectory=/opt/paktrack/backend
+EnvironmentFile=/etc/paktrack/backend.env
+ExecStart=/opt/paktrack/backend/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
